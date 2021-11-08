@@ -142,6 +142,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named delete_me_later
+
+# Build rule for target.
+delete_me_later: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 delete_me_later
+.PHONY : delete_me_later
+
+# fast build rule for target.
+delete_me_later/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\delete_me_later.dir\build.make CMakeFiles/delete_me_later.dir/build
+.PHONY : delete_me_later/fast
+
+#=============================================================================
 # Target rules for targets named data_structures
 
 # Build rule for target.
@@ -190,6 +203,30 @@ data_structures.s: data_structures.cpp.s
 data_structures.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\data_structures.dir\build.make CMakeFiles/data_structures.dir/data_structures.cpp.s
 .PHONY : data_structures.cpp.s
+
+delete_me_later.obj: delete_me_later.cpp.obj
+.PHONY : delete_me_later.obj
+
+# target to build an object file
+delete_me_later.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\delete_me_later.dir\build.make CMakeFiles/delete_me_later.dir/delete_me_later.cpp.obj
+.PHONY : delete_me_later.cpp.obj
+
+delete_me_later.i: delete_me_later.cpp.i
+.PHONY : delete_me_later.i
+
+# target to preprocess a source file
+delete_me_later.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\delete_me_later.dir\build.make CMakeFiles/delete_me_later.dir/delete_me_later.cpp.i
+.PHONY : delete_me_later.cpp.i
+
+delete_me_later.s: delete_me_later.cpp.s
+.PHONY : delete_me_later.s
+
+# target to generate assembly for a file
+delete_me_later.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\delete_me_later.dir\build.make CMakeFiles/delete_me_later.dir/delete_me_later.cpp.s
+.PHONY : delete_me_later.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -272,12 +309,16 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... data_structures
+	@echo ... delete_me_later
 	@echo ... main
 	@echo ... task_1
 	@echo ... task_2
 	@echo ... data_structures.obj
 	@echo ... data_structures.i
 	@echo ... data_structures.s
+	@echo ... delete_me_later.obj
+	@echo ... delete_me_later.i
+	@echo ... delete_me_later.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
