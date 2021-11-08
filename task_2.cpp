@@ -10,22 +10,23 @@ int main()
 
     auto lambda = [](std::vector<int> &inList)
     {
-        std::unordered_set<int> set;
         std::unique_ptr<std::vector<int>> smart;
 
-        for(auto &i: inList)
+        std::unordered_set<int> set;
+        set.insert(inList.begin(), inList.end());
+
+        std::cout << set.size() << std::endl;
+
+        for(auto &i : set)
         {
-            std::cout << i << " ";
-            set.insert(i);
+            std::cout << i << " counts " << set.count(i) << std::endl;
         }
-        std::cout << std::endl;
-        for(auto &i : set) std::cout << i << " counts " << set.count(i) << std::endl;
 
         for(auto &i : set)
         {
             if(set.count(i) == 1)
             {
-                std::cout << i << " ";
+                //TODO unique vector here
             }
         }
 
