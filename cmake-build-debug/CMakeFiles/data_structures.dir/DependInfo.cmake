@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Poizone/CLionProjects/New features c++/data_structures.cpp" "C:/Users/Poizone/CLionProjects/New features c++/cmake-build-debug/CMakeFiles/data_structures.dir/data_structures.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
