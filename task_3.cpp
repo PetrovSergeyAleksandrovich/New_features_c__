@@ -45,8 +45,7 @@ int main()
         return files_list;
     };
 
-    std::vector<std::string> found = files(p, file_type);
-
+    auto found = files(p, file_type);
     for(auto &i : found) std::cout << i << std::endl;
 
     return 0;
